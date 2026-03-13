@@ -3,168 +3,178 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>University Guide — Electrical Engineering</title>
+<title>University Guide — EE for Biomedical Health Tech</title>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-:root {
-  --bg:       #F2EDE4;
-  --card:     #F8F4EE;
-  --ink:      #1C1A16;
-  --ink-2:    #3E3A32;
-  --ink-3:    #6E6A60;
-  --div:      rgba(28,26,22,0.15);
-  --div-s:    rgba(28,26,22,0.28);
-  --teal:     #0D5C4A;  --teal-bg: #DFF0EB;  --teal-mid: #7BBFB3;
-  --blue:     #1A4878;  --blue-bg: #DDE8F5;  --blue-mid: #7AAACF;
-  --amber:    #7A4A0A;  --amber-bg:#F5E8D0;  --amber-mid:#C9943A;
-  --red:      #7A1A1A;  --red-bg:  #F5DEDE;  --red-mid:  #C97A7A;
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#F2EDE4;--card:#F8F4EE;--card2:#EDE7DC;
+  --ink:#1C1A16;--ink2:#3E3A32;--ink3:#6E6A60;
+  --div:rgba(28,26,22,.14);--divs:rgba(28,26,22,.26);
+  --teal:#0D5C4A;--tbg:#DFF0EB;--tmid:#7BBFB3;
+  --blue:#1A4878;--bbg:#DDE8F5;--bmid:#7AAACF;
+  --amber:#7A4A0A;--abg:#F5E8D0;--amid:#C9943A;
+  --red:#7A1A1A;--rbg:#F5DEDE;--rmid:#C97A7A;
 }
-html { scroll-behavior: smooth; }
-body {
-  background: var(--bg);
-  color: var(--ink);
-  font-family: 'Nunito', sans-serif;
-  font-size: 17px;
-  line-height: 1.8;
-  -webkit-font-smoothing: antialiased;
-}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Nunito',sans-serif;font-size:17px;line-height:1.8;-webkit-font-smoothing:antialiased}
 
-/* ── HEADER ── */
-.site-header { background: var(--ink); padding: 60px 0 52px; }
-.w { max-width: 1060px; margin: 0 auto; padding: 0 52px; }
-.eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--teal-mid); margin-bottom: 18px; }
-.site-header h1 { font-family: 'Lora', serif; font-size: clamp(28px, 3.8vw, 48px); font-weight: 400; line-height: 1.2; color: #F2EDE4; margin-bottom: 32px; max-width: 680px; }
-.site-header h1 em { font-style: italic; color: var(--teal-mid); }
-.meta-row { display: flex; flex-wrap: wrap; gap: 28px; }
-.meta-item { display: flex; flex-direction: column; gap: 3px; }
-.meta-label { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(242,237,228,0.4); }
-.meta-value { font-size: 15px; font-weight: 500; color: rgba(242,237,228,0.85); }
+/* HEADER */
+.hdr{background:var(--ink);padding:60px 0 52px}
+.w{max-width:1080px;margin:0 auto;padding:0 52px}
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--tmid);margin-bottom:18px}
+.hdr h1{font-family:'Lora',serif;font-size:clamp(28px,3.8vw,48px);font-weight:400;line-height:1.2;color:#F2EDE4;margin-bottom:30px;max-width:700px}
+.hdr h1 em{font-style:italic;color:var(--tmid)}
+.meta-row{display:flex;flex-wrap:wrap;gap:26px}
+.mi{display:flex;flex-direction:column;gap:3px}
+.ml{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(242,237,228,.38)}
+.mv{font-size:15px;font-weight:500;color:rgba(242,237,228,.84)}
 
-/* ── NAV ── */
-nav { position: sticky; top: 0; z-index: 100; background: rgba(22,20,16,0.97); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.07); }
-.nav-inner { max-width: 1060px; margin: 0 auto; padding: 0 52px; display: flex; overflow-x: auto; scrollbar-width: none; }
-.nav-inner::-webkit-scrollbar { display: none; }
-nav a { display: block; padding: 15px 20px; font-size: 13px; font-weight: 700; letter-spacing: 0.04em; color: rgba(255,255,255,0.45); text-decoration: none; white-space: nowrap; border-bottom: 2px solid transparent; transition: color .18s, border-color .18s; }
-nav a:hover { color: #fff; border-bottom-color: var(--teal-mid); }
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(22,20,16,.97);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.07)}
+.nav-inner{max-width:1080px;margin:0 auto;padding:0 52px;display:flex;overflow-x:auto;scrollbar-width:none}
+.nav-inner::-webkit-scrollbar{display:none}
+nav a{display:block;padding:14px 18px;font-size:13px;font-weight:700;letter-spacing:.04em;color:rgba(255,255,255,.42);text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;transition:color .18s,border-color .18s}
+nav a:hover{color:#fff;border-bottom-color:var(--tmid)}
 
-/* ── LAYOUT ── */
-main { max-width: 1060px; margin: 0 auto; padding: 0 52px 100px; }
-section { padding: 68px 0; border-bottom: 1.5px solid var(--div); }
-section:last-child { border-bottom: none; }
-.sec-tag { font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 10px; }
-.sec-title { font-family: 'Lora', serif; font-size: clamp(24px, 2.8vw, 36px); font-weight: 400; line-height: 1.25; color: var(--ink); margin-bottom: 12px; }
-.sec-intro { font-size: 17px; color: var(--ink-2); max-width: 660px; line-height: 1.8; margin-bottom: 36px; }
+/* LAYOUT */
+main{max-width:1080px;margin:0 auto;padding:0 52px 100px}
+section{padding:68px 0;border-bottom:1.5px solid var(--div)}
+section:last-child{border-bottom:none}
+.stag{font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--ink3);margin-bottom:10px}
+.stitle{font-family:'Lora',serif;font-size:clamp(24px,2.8vw,36px);font-weight:400;line-height:1.25;color:var(--ink);margin-bottom:12px}
+.sintro{font-size:17px;color:var(--ink2);max-width:660px;line-height:1.8;margin-bottom:36px}
 
-/* ── OVERVIEW CARDS ── */
-.ov-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 32px; }
-.ov-card { background: var(--card); border: 1.5px solid var(--div-s); border-radius: 14px; padding: 28px 24px; position: relative; }
-.ov-card.rec { border-color: var(--teal); border-width: 2px; background: #EBF5F1; }
-.rec-badge { position: absolute; top: -12px; left: 18px; background: var(--teal); color: #fff; font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; padding: 3px 11px; border-radius: 20px; }
-.ov-name { font-family: 'Lora', serif; font-size: 26px; font-weight: 600; color: var(--ink); margin-bottom: 2px; }
-.ov-loc { font-size: 13px; color: var(--ink-3); font-weight: 600; margin-bottom: 16px; }
-.ov-tag { display: inline-block; font-size: 12px; font-weight: 700; padding: 4px 13px; border-radius: 20px; margin-bottom: 20px; }
-.tg { background: var(--teal-bg); color: var(--teal); }
-.bg { background: var(--blue-bg); color: var(--blue); }
-.ag { background: var(--amber-bg); color: var(--amber); }
-.rg { background: var(--red-bg); color: var(--red); }
-.bar-item { margin-bottom: 12px; }
-.bar-label { font-size: 12px; font-weight: 600; color: var(--ink-3); margin-bottom: 5px; display: flex; justify-content: space-between; }
-.bar-track { height: 6px; background: rgba(28,26,22,0.1); border-radius: 4px; overflow: hidden; }
-.bar-fill { height: 100%; border-radius: 4px; }
-.ft { background: var(--teal); } .fb { background: var(--blue); } .fa { background: var(--amber); } .fr { background: var(--red); }
+/* OVERVIEW CARDS */
+.ov-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:32px}
+.ovc{background:var(--card);border:1.5px solid var(--divs);border-radius:14px;padding:28px 24px;position:relative}
+.ovc.rec{border-color:var(--teal);border-width:2px;background:#EBF5F1}
+.rbadge{position:absolute;top:-12px;left:18px;background:var(--teal);color:#fff;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:3px 11px;border-radius:20px}
+.oname{font-family:'Lora',serif;font-size:26px;font-weight:600;color:var(--ink);margin-bottom:2px}
+.oloc{font-size:13px;color:var(--ink3);font-weight:600;margin-bottom:14px}
+.otag{display:inline-block;font-size:12px;font-weight:700;padding:4px 13px;border-radius:20px;margin-bottom:18px}
+.tg{background:var(--tbg);color:var(--teal)}.bg{background:var(--bbg);color:var(--blue)}.ag{background:var(--abg);color:var(--amber)}.rg{background:var(--rbg);color:var(--red)}
+.bi{margin-bottom:12px}
+.bl{font-size:12px;font-weight:600;color:var(--ink3);margin-bottom:5px;display:flex;justify-content:space-between}
+.bt{height:6px;background:rgba(28,26,22,.1);border-radius:4px;overflow:hidden}
+.bf{height:100%;border-radius:4px}
+.ft{background:var(--teal)}.fb{background:var(--blue)}.fa{background:var(--amber)}.fr{background:var(--red)}
 
-/* ── SCORECARD ── */
-.sc-wrap { overflow-x: auto; border-radius: 14px; border: 1.5px solid var(--div-s); background: var(--card); margin-top: 8px; }
-table.sc { width: 100%; border-collapse: collapse; font-size: 15px; }
-table.sc thead tr { background: var(--ink); color: #F2EDE4; }
-table.sc thead th { padding: 16px 18px; font-size: 13px; font-weight: 700; text-align: center; letter-spacing: 0.04em; }
-table.sc thead th:first-child { text-align: left; }
-table.sc tbody tr { border-bottom: 1px solid var(--div); }
-table.sc tbody tr:last-child { border-bottom: none; }
-table.sc tbody tr:hover { background: rgba(28,26,22,0.03); }
-table.sc td { padding: 13px 18px; color: var(--ink-2); vertical-align: middle; text-align: center; }
-table.sc td.rl { text-align: left; font-weight: 600; font-size: 14px; color: var(--ink); white-space: nowrap; }
-.dot { display: inline-flex; width: 32px; height: 32px; border-radius: 50%; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; }
-.dg { background: var(--teal); color: #fff; }
-.db { background: var(--blue); color: #fff; }
-.do { background: rgba(28,26,22,0.11); color: var(--ink-3); }
-.dw { background: var(--red); color: #fff; }
-.sc-leg { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 14px; font-size: 13px; font-weight: 600; color: var(--ink-3); align-items: center; }
-.ld { display: inline-flex; width: 22px; height: 22px; border-radius: 50%; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; margin-right: 5px; vertical-align: middle; }
+/* SCORECARD */
+.sc-wrap{overflow-x:auto;border-radius:14px;border:1.5px solid var(--divs);background:var(--card);margin-top:8px}
+table.sc{width:100%;border-collapse:collapse;font-size:15px}
+table.sc thead tr{background:var(--ink);color:#F2EDE4}
+table.sc thead th{padding:16px 18px;font-size:13px;font-weight:700;text-align:center;letter-spacing:.04em}
+table.sc thead th:first-child{text-align:left}
+table.sc tbody tr{border-bottom:1px solid var(--div)}
+table.sc tbody tr:last-child{border-bottom:none}
+table.sc tbody tr:hover{background:rgba(28,26,22,.03)}
+table.sc td{padding:13px 18px;color:var(--ink2);vertical-align:middle;text-align:center}
+table.sc td.rl{text-align:left;font-weight:700;font-size:14px;color:var(--ink);white-space:nowrap}
+table.sc td.rl a{color:var(--teal);text-decoration:none;font-size:11px;font-weight:600;margin-left:8px;opacity:.7}
+table.sc td.rl a:hover{opacity:1}
+.dot{display:inline-flex;width:32px;height:32px;border-radius:50%;align-items:center;justify-content:center;font-size:14px;font-weight:700}
+.dg{background:var(--teal);color:#fff}.db{background:var(--blue);color:#fff}.do{background:rgba(28,26,22,.11);color:var(--ink3)}.dw{background:var(--red);color:#fff}
+.sc-leg{display:flex;gap:20px;flex-wrap:wrap;margin-top:14px;font-size:13px;font-weight:600;color:var(--ink3);align-items:center}
+.ld{display:inline-flex;width:22px;height:22px;border-radius:50%;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin-right:5px;vertical-align:middle}
 
-/* ── DEEP DIVES ── */
-.dive { margin-bottom: 60px; padding-bottom: 60px; border-bottom: 1px solid var(--div); }
-.dive:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-.dive-hdr { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-bottom: 14px; }
-.dive-name { font-family: 'Lora', serif; font-size: 30px; font-weight: 600; color: var(--ink); }
-.dive-sub { font-size: 14px; color: var(--ink-3); font-weight: 600; margin-top: 3px; }
-.dive-verdict { font-size: 16px; color: var(--ink-2); line-height: 1.8; max-width: 760px; margin-bottom: 28px; }
-.dim-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(256px, 1fr)); gap: 14px; margin-bottom: 20px; }
-.dim-card { background: var(--card); border: 1.5px solid var(--div-s); border-radius: 10px; padding: 20px 22px; }
-.dim-label { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 6px; }
-.dim-stars { font-size: 15px; margin-bottom: 8px; color: var(--amber); }
-.dim-text { font-size: 14px; color: var(--ink-2); line-height: 1.75; }
-.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
-.chip { font-size: 12px; font-weight: 700; padding: 4px 13px; border-radius: 20px; border: 1.5px solid; }
-.cg { background: var(--teal-bg); color: var(--teal); border-color: var(--teal-mid); }
-.cr { background: var(--red-bg); color: var(--red); border-color: var(--red-mid); }
-.ca { background: var(--amber-bg); color: var(--amber); border-color: var(--amber-mid); }
+/* DIMENSION SECTIONS */
+.dim-section{margin-bottom:64px;padding-bottom:64px;border-bottom:1px solid var(--div)}
+.dim-section:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.dim-header{display:flex;align-items:center;gap:16px;margin-bottom:8px;flex-wrap:wrap}
+.dim-title{font-family:'Lora',serif;font-size:26px;font-weight:600;color:var(--ink)}
+.dim-intro{font-size:16px;color:var(--ink2);max-width:760px;line-height:1.8;margin-bottom:28px}
+.dim-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-bottom:20px}
+.dc{background:var(--card);border:1.5px solid var(--divs);border-radius:12px;padding:22px 20px}
+.dc.rec{background:#EBF5F1;border-color:var(--teal)}
+.dc-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;flex-wrap:wrap;gap:8px}
+.dc-uni{font-family:'Lora',serif;font-size:17px;font-weight:600;color:var(--ink)}
+.dc-stars{font-size:14px;color:var(--amber)}
+.dc-text{font-size:14px;color:var(--ink2);line-height:1.75}
+.dc-stat{display:inline-block;font-size:12px;font-weight:700;padding:3px 10px;border-radius:6px;margin-top:10px;margin-right:4px}
+.st{background:var(--tbg);color:var(--teal)}.sb{background:var(--bbg);color:var(--blue)}.sa{background:var(--abg);color:var(--amber)}.sr{background:var(--rbg);color:var(--red)}
+.data-note{font-size:13px;color:var(--ink3);font-style:italic;margin-top:8px}
 
-/* ── WARNING ── */
-.warn { background: var(--red-bg); border-left: 4px solid var(--red); border-radius: 0 10px 10px 0; padding: 18px 22px; margin-bottom: 24px; font-size: 15px; line-height: 1.75; color: #5C1010; font-weight: 500; }
-.warn strong { font-weight: 700; }
+/* INSIGHT */
+.insight{background:var(--ink);color:#F2EDE4;border-radius:14px;padding:36px 40px;margin:28px 0}
+.ins-label{font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--tmid);margin-bottom:14px}
+.insight p{font-family:'Lora',serif;font-size:clamp(16px,1.9vw,20px);font-style:italic;line-height:1.65;color:rgba(242,237,228,.92)}
 
-/* ── INSIGHT ── */
-.insight { background: var(--ink); color: #F2EDE4; border-radius: 14px; padding: 36px 40px; margin: 28px 0; }
-.ins-label { font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--teal-mid); margin-bottom: 14px; }
-.insight p { font-family: 'Lora', serif; font-size: clamp(16px, 1.9vw, 20px); font-style: italic; line-height: 1.65; color: rgba(242,237,228,0.92); }
+/* WARNING */
+.warn{background:var(--rbg);border-left:4px solid var(--red);border-radius:0 10px 10px 0;padding:18px 22px;margin:20px 0;font-size:15px;line-height:1.75;color:#5C1010;font-weight:500}
+.warn strong{font-weight:700}
 
-/* ── MEANING ── */
-.mg { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 28px; }
-.mc { background: var(--card); border: 1.5px solid var(--div-s); border-radius: 10px; padding: 24px 22px; }
-.mc-title { font-family: 'Lora', serif; font-size: 17px; font-weight: 600; color: var(--ink); margin-bottom: 10px; }
-.mc-text { font-size: 14px; color: var(--ink-2); line-height: 1.75; }
+/* CHIPS */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chip{font-size:12px;font-weight:700;padding:4px 13px;border-radius:20px;border:1.5px solid}
+.cg{background:var(--tbg);color:var(--teal);border-color:var(--tmid)}.cr{background:var(--rbg);color:var(--red);border-color:var(--rmid)}.ca{background:var(--abg);color:var(--amber);border-color:var(--amid)}
 
-/* ── PROFESSORS ── */
-.pg { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 16px; margin-top: 28px; }
-.pc { background: var(--card); border: 1.5px solid var(--div-s); border-radius: 14px; padding: 26px 24px; }
-.pc-name { font-family: 'Lora', serif; font-size: 20px; font-weight: 600; color: var(--ink); margin-bottom: 4px; }
-.pc-role { font-size: 12px; font-weight: 700; color: var(--ink-3); margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.07em; }
-.pc-focus { font-size: 14px; color: var(--ink-2); line-height: 1.75; margin-bottom: 14px; }
-.pc-why { font-family: 'Lora', serif; font-size: 14px; font-style: italic; color: var(--ink); border-left: 3px solid var(--teal); padding-left: 14px; line-height: 1.7; }
+/* WEATHER TABLE */
+.wtable{width:100%;border-collapse:collapse;font-size:14px;border-radius:12px;overflow:hidden;border:1.5px solid var(--divs);margin-top:16px}
+.wtable th{background:var(--ink);color:#F2EDE4;padding:10px 14px;font-size:12px;font-weight:700;text-align:center;letter-spacing:.06em;text-transform:uppercase}
+.wtable th:first-child{text-align:left}
+.wtable td{padding:9px 14px;border-bottom:1px solid var(--div);text-align:center;color:var(--ink2)}
+.wtable td:first-child{text-align:left;font-weight:600;color:var(--ink);font-size:13px}
+.wtable tr:last-child td{border-bottom:none}
+.temp-cold{color:var(--red);font-weight:700}
+.temp-mild{color:var(--amber);font-weight:600}
+.temp-ok{color:var(--teal);font-weight:600}
 
-/* ── VERDICT ── */
-.vg { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 32px; }
-.vc { background: var(--card); border: 1.5px solid var(--div-s); border-radius: 14px; padding: 28px 24px; }
-.vc.top { background: var(--teal); border-color: var(--teal); }
-.v-rank { font-family: 'Lora', serif; font-size: 54px; font-weight: 400; line-height: 1; color: rgba(28,26,22,0.09); margin-bottom: 4px; }
-.vc.top .v-rank { color: rgba(255,255,255,0.18); }
-.v-uni { font-family: 'Lora', serif; font-size: 22px; font-weight: 600; color: var(--ink); margin-bottom: 10px; }
-.vc.top .v-uni { color: #fff; }
-.v-text { font-size: 14px; color: var(--ink-2); line-height: 1.75; }
-.vc.top .v-text { color: rgba(255,255,255,0.88); }
-.closing { margin-top: 52px; padding-top: 44px; border-top: 1.5px solid var(--div); }
-.closing p { font-family: 'Lora', serif; font-size: clamp(18px, 2.2vw, 26px); font-style: italic; line-height: 1.55; max-width: 680px; color: var(--ink); }
+/* IMMIGRATION TIMELINE */
+.timeline{display:flex;flex-direction:column;gap:0;margin:20px 0}
+.tl-item{display:flex;gap:16px;padding:16px 0}
+.tl-item:not(:last-child){border-bottom:1px solid var(--div)}
+.tl-dot{width:36px;height:36px;border-radius:50%;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;flex-shrink:0;margin-top:2px}
+.tl-content{}
+.tl-step{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-bottom:3px}
+.tl-desc{font-size:15px;color:var(--ink2);line-height:1.7}
 
-@media (max-width: 680px) {
-  .w, .nav-inner, main { padding-left: 22px; padding-right: 22px; }
-  .site-header { padding: 40px 0 36px; }
-  section { padding: 48px 0; }
+/* PROF CARDS */
+.pg{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:16px;margin-top:28px}
+.pc{background:var(--card);border:1.5px solid var(--divs);border-radius:14px;padding:26px 24px}
+.pc-name{font-family:'Lora',serif;font-size:20px;font-weight:600;color:var(--ink);margin-bottom:4px}
+.pc-role{font-size:12px;font-weight:700;color:var(--ink3);margin-bottom:14px;text-transform:uppercase;letter-spacing:.07em}
+.pc-focus{font-size:14px;color:var(--ink2);line-height:1.75;margin-bottom:14px}
+.pc-why{font-family:'Lora',serif;font-size:14px;font-style:italic;color:var(--ink);border-left:3px solid var(--teal);padding-left:14px;line-height:1.7}
+
+/* MEANING */
+.mg{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:28px}
+.mc{background:var(--card);border:1.5px solid var(--divs);border-radius:10px;padding:24px 22px}
+.mc-title{font-family:'Lora',serif;font-size:17px;font-weight:600;color:var(--ink);margin-bottom:10px}
+.mc-text{font-size:14px;color:var(--ink2);line-height:1.75}
+
+/* VERDICT */
+.vg{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:32px}
+.vc{background:var(--card);border:1.5px solid var(--divs);border-radius:14px;padding:28px 24px}
+.vc.top{background:var(--teal);border-color:var(--teal)}
+.v-rank{font-family:'Lora',serif;font-size:54px;font-weight:400;line-height:1;color:rgba(28,26,22,.09);margin-bottom:4px}
+.vc.top .v-rank{color:rgba(255,255,255,.18)}
+.v-uni{font-family:'Lora',serif;font-size:22px;font-weight:600;color:var(--ink);margin-bottom:10px}
+.vc.top .v-uni{color:#fff}
+.v-text{font-size:14px;color:var(--ink2);line-height:1.75}
+.vc.top .v-text{color:rgba(255,255,255,.88)}
+.closing{margin-top:52px;padding-top:44px;border-top:1.5px solid var(--div)}
+.closing p{font-family:'Lora',serif;font-size:clamp(18px,2.2vw,26px);font-style:italic;line-height:1.55;max-width:680px;color:var(--ink)}
+
+@media(max-width:680px){
+  .w,.nav-inner,main{padding-left:22px;padding-right:22px}
+  .hdr{padding:40px 0 36px}
+  section{padding:48px 0}
+  .insight{padding:24px 22px}
 }
 </style>
 </head>
 <body>
 
-<header class="site-header">
+<header class="hdr">
   <div class="w">
-    <p class="eyebrow">Undergraduate Electrical Engineering — University Guide</p>
+    <p class="eyebrow">Undergraduate Electrical Engineering — Personal University Guide</p>
     <h1>Choosing where to study <em>Electrical Engineering</em> — a guide for you and your family</h1>
     <div class="meta-row">
-      <div class="meta-item"><span class="meta-label">Applicant</span><span class="meta-value">International student from Ho Chi Minh City, Vietnam</span></div>
-      <div class="meta-item"><span class="meta-label">Primary interest</span><span class="meta-value">Biomedical &amp; Health Technology EE</span></div>
-      <div class="meta-item"><span class="meta-label">Key goals</span><span class="meta-value">Meaningful work · Stay after graduation · Collaborative environment</span></div>
-      <div class="meta-item"><span class="meta-label">Schools compared</span><span class="meta-value">UBC · Northwestern · UofT · Waterloo</span></div>
+      <div class="mi"><span class="ml">Applicant</span><span class="mv">International student from Ho Chi Minh City, Vietnam</span></div>
+      <div class="mi"><span class="ml">Primary interest</span><span class="mv">Biomedical &amp; Health Technology EE</span></div>
+      <div class="mi"><span class="ml">Key goals</span><span class="mv">Meaningful work · Stay after graduation · Collaborative environment</span></div>
+      <div class="mi"><span class="ml">Schools compared</span><span class="mv">UBC · Northwestern · UofT · Waterloo</span></div>
     </div>
   </div>
 </header>
@@ -173,220 +183,389 @@ table.sc td.rl { text-align: left; font-weight: 600; font-size: 14px; color: var
   <div class="nav-inner">
     <a href="#overview">Overview</a>
     <a href="#scorecard">Scorecard</a>
-    <a href="#deepdives">Deep Dives</a>
+    <a href="#biomedical">Biomedical EE</a>
+    <a href="#immigration">Immigration</a>
+    <a href="#weather">Weather</a>
+    <a href="#coop">Co-op &amp; Jobs</a>
+    <a href="#campus">Campus Life</a>
     <a href="#meaning">Meaningful Work</a>
     <a href="#professors">Professors</a>
-    <a href="#verdict">Final Verdict</a>
+    <a href="#verdict">Verdict</a>
   </div>
 </nav>
 
 <main>
 
-<!-- 01 -->
+<!-- 01 OVERVIEW -->
 <section id="overview">
-  <p class="sec-tag">01 — Overview</p>
-  <h2 class="sec-title">Four universities. One question: where will you become the engineer you're meant to be?</h2>
-  <p class="sec-intro">Each school was evaluated across academics, career outcomes, immigration, campus life, political climate, and — most importantly — how well it supports a student who wants to do meaningful work in biomedical engineering.</p>
+  <p class="stag">01 — Overview</p>
+  <h2 class="stitle">Four universities. One question: where will you become the engineer you're meant to be?</h2>
+  <p class="sintro">Each school was evaluated across 17 dimensions — from biomedical EE strength to immigration certainty to weather. Each rating below is backed by data and sourced evidence, which you can explore in the sections that follow.</p>
   <div class="ov-grid">
 
-    <div class="ov-card rec">
-      <span class="rec-badge">Recommended</span>
-      <div class="ov-name">UBC</div>
-      <div class="ov-loc">Vancouver, British Columbia 🇨🇦</div>
-      <span class="ov-tag tg">Best overall fit</span>
-      <div class="bar-item"><div class="bar-label"><span>Overall fit</span><span>90%</span></div><div class="bar-track"><div class="bar-fill ft" style="width:90%"></div></div></div>
-      <div class="bar-item"><div class="bar-label"><span>Biomedical EE</span><span>78%</span></div><div class="bar-track"><div class="bar-fill ft" style="width:78%"></div></div></div>
-      <div class="bar-item"><div class="bar-label"><span>Soul-nurturing</span><span>92%</span></div><div class="bar-track"><div class="bar-fill ft" style="width:92%"></div></div></div>
-      <div class="bar-item"><div class="bar-label"><span>Immigration path</span><span>88%</span></div><div class="bar-track"><div class="bar-fill ft" style="width:88%"></div></div></div>
+    <div class="ovc rec">
+      <span class="rbadge">Recommended</span>
+      <div class="oname">UBC</div>
+      <div class="oloc">Vancouver, British Columbia 🇨🇦</div>
+      <span class="otag tg">Best overall fit</span>
+      <div class="bi"><div class="bl"><span>Overall fit</span><span>90%</span></div><div class="bt"><div class="bf ft" style="width:90%"></div></div></div>
+      <div class="bi"><div class="bl"><span>Biomedical EE</span><span>78%</span></div><div class="bt"><div class="bf ft" style="width:78%"></div></div></div>
+      <div class="bi"><div class="bl"><span>Soul-nurturing</span><span>92%</span></div><div class="bt"><div class="bf ft" style="width:92%"></div></div></div>
+      <div class="bi"><div class="bl"><span>Immigration certainty</span><span>88%</span></div><div class="bt"><div class="bf ft" style="width:88%"></div></div></div>
+      <div class="bi"><div class="bl"><span>Intl tuition / yr</span><span>CAD ~$56k</span></div><div class="bt"><div class="bf ft" style="width:70%"></div></div></div>
     </div>
 
-    <div class="ov-card">
-      <div class="ov-name">Northwestern</div>
-      <div class="ov-loc">Evanston, Illinois 🇺🇸</div>
-      <span class="ov-tag bg">Best academic fit — with risk</span>
-      <div class="bar-item"><div class="bar-label"><span>Overall fit</span><span>58%</span></div><div class="bar-track"><div class="bar-fill fb" style="width:58%"></div></div></div>
-      <div class="bar-item"><div class="bar-label"><span>Biomedical EE</span><span>97%</span></div><div class="bar-track"><div class="bar-fill fb" style="width:97%"></div></div></div>
-      <div class="bar-item"><div class="bar-label"><span>Soul-nurturing</span><span>72%</span></div><div class="bar-track"><div class="bar-fill fb" style="width:72%"></div></div></div>
-      <div class="bar-item"><div class="bar-label"><span>Immigration path</span><span>28%</span></div><div class="bar-track"><div class="bar-fill fb" style="width:28%"></div></div></div>
+    <div class="ovc">
+      <div class="oname">Northwestern</div>
+      <div class="oloc">Evanston, Illinois 🇺🇸</div>
+      <span class="otag bg">Best academic fit — high risk</span>
+      <div class="bi"><div class="bl"><span>Overall fit</span><span>58%</span></div><div class="bt"><div class="bf fb" style="width:58%"></div></div></div>
+      <div class="bi"><div class="bl"><span>Biomedical EE</span><span>97%</span></div><div class="bt"><div class="bf fb" style="width:97%"></div></div></div>
+      <div class="bi"><div class="bl"><span>Soul-nurturing</span><span>72%</span></div><div class="bt"><div class="bf fb" style="width:72%"></div></div></div>
+      <div class="bi"><div class="bl"><span>Immigration certainty</span><span>22%</span></div><div class="bt"><div class="bf fb" style="width:22%"></div></div></div>
+      <div class="bi"><div class="bl"><span>Intl tuition / yr</span><span>USD ~$65k</span></div><div class="bt"><div class="bf fb" style="width:58%"></div></div></div>
     </div>
 
-    <div class="ov-card">
-      <div class="ov-name">UofT</div>
-      <div class="ov-loc">Toronto, Ontario 🇨🇦</div>
-      <span class="ov-tag ag">Strong if research-bound</span>
-      <div class="bar-item"><div class="bar-label"><span>Overall fit</span><span>68%</span></div><div class="bar-track"><div class="bar-fill fa" style="width:68%"></div></div></div>
-      <div class="bar-item"><div class="bar-label"><span>Biomedical EE</span><span>82%</span></div><div class="bar-track"><div class="bar-fill fa" style="width:82%"></div></div></div>
-      <div class="bar-item"><div class="bar-label"><span>Soul-nurturing</span><span>50%</span></div><div class="bar-track"><div class="bar-fill fa" style="width:50%"></div></div></div>
-      <div class="bar-item"><div class="bar-label"><span>Immigration path</span><span>88%</span></div><div class="bar-track"><div class="bar-fill fa" style="width:88%"></div></div></div>
+    <div class="ovc">
+      <div class="oname">UofT</div>
+      <div class="oloc">Toronto, Ontario 🇨🇦</div>
+      <span class="otag ag">Strong if research-bound</span>
+      <div class="bi"><div class="bl"><span>Overall fit</span><span>68%</span></div><div class="bt"><div class="bf fa" style="width:68%"></div></div></div>
+      <div class="bi"><div class="bl"><span>Biomedical EE</span><span>82%</span></div><div class="bt"><div class="bf fa" style="width:82%"></div></div></div>
+      <div class="bi"><div class="bl"><span>Soul-nurturing</span><span>50%</span></div><div class="bt"><div class="bf fa" style="width:50%"></div></div></div>
+      <div class="bi"><div class="bl"><span>Immigration certainty</span><span>88%</span></div><div class="bt"><div class="bf fa" style="width:88%"></div></div></div>
+      <div class="bi"><div class="bl"><span>Intl tuition / yr</span><span>CAD ~$62k</span></div><div class="bt"><div class="bf fa" style="width:64%"></div></div></div>
     </div>
 
-    <div class="ov-card">
-      <div class="ov-name">Waterloo</div>
-      <div class="ov-loc">Waterloo, Ontario 🇨🇦</div>
-      <span class="ov-tag rg">Misaligned with your goals</span>
-      <div class="bar-item"><div class="bar-label"><span>Overall fit</span><span>42%</span></div><div class="bar-track"><div class="bar-fill fr" style="width:42%"></div></div></div>
-      <div class="bar-item"><div class="bar-label"><span>Biomedical EE</span><span>38%</span></div><div class="bar-track"><div class="bar-fill fr" style="width:38%"></div></div></div>
-      <div class="bar-item"><div class="bar-label"><span>Soul-nurturing</span><span>28%</span></div><div class="bar-track"><div class="bar-fill fr" style="width:28%"></div></div></div>
-      <div class="bar-item"><div class="bar-label"><span>Immigration path</span><span>88%</span></div><div class="bar-track"><div class="bar-fill fr" style="width:88%"></div></div></div>
+    <div class="ovc">
+      <div class="oname">Waterloo</div>
+      <div class="oloc">Waterloo, Ontario 🇨🇦</div>
+      <span class="otag rg">Misaligned with your goals</span>
+      <div class="bi"><div class="bl"><span>Overall fit</span><span>42%</span></div><div class="bt"><div class="bf fr" style="width:42%"></div></div></div>
+      <div class="bi"><div class="bl"><span>Biomedical EE</span><span>38%</span></div><div class="bt"><div class="bf fr" style="width:38%"></div></div></div>
+      <div class="bi"><div class="bl"><span>Soul-nurturing</span><span>28%</span></div><div class="bt"><div class="bf fr" style="width:28%"></div></div></div>
+      <div class="bi"><div class="bl"><span>Immigration certainty</span><span>88%</span></div><div class="bt"><div class="bf fr" style="width:88%"></div></div></div>
+      <div class="bi"><div class="bl"><span>Intl tuition / yr</span><span>CAD ~$58k</span></div><div class="bt"><div class="bf fr" style="width:68%"></div></div></div>
     </div>
 
   </div>
 </section>
 
-<!-- 02 -->
+<!-- 02 SCORECARD -->
 <section id="scorecard">
-  <p class="sec-tag">02 — Scorecard</p>
-  <h2 class="sec-title">Every dimension that matters, side by side</h2>
+  <p class="stag">02 — Scorecard</p>
+  <h2 class="stitle">Every dimension that matters, side by side</h2>
+  <p class="sintro">Each row links to a deep-dive section below with data. Click the dimension name to jump directly to the evidence.</p>
   <div class="sc-wrap">
     <table class="sc">
-      <thead><tr><th style="text-align:left;width:200px">Dimension</th><th>UBC</th><th>Northwestern</th><th>UofT</th><th>Waterloo</th></tr></thead>
+      <thead><tr><th style="text-align:left;width:210px">Dimension</th><th>UBC</th><th>Northwestern</th><th>UofT</th><th>Waterloo</th></tr></thead>
       <tbody>
-        <tr><td class="rl">School vibe (collaborative)</td><td><span class="dot dg">★</span></td><td><span class="dot db">✓</span></td><td><span class="dot do">~</span></td><td><span class="dot do">~</span></td></tr>
-        <tr><td class="rl">Weather (vs. HCMC)</td><td><span class="dot db">✓</span></td><td><span class="dot dw">✗</span></td><td><span class="dot dw">✗</span></td><td><span class="dot dw">✗</span></td></tr>
-        <tr><td class="rl">Co-op &amp; internships</td><td><span class="dot db">✓</span></td><td><span class="dot db">✓</span></td><td><span class="dot db">✓</span></td><td><span class="dot dg">★</span></td></tr>
-        <tr><td class="rl">Immigration (stay after grad)</td><td><span class="dot dg">★</span></td><td><span class="dot dw">✗</span></td><td><span class="dot dg">★</span></td><td><span class="dot dg">★</span></td></tr>
-        <tr><td class="rl">Campus &amp; social life</td><td><span class="dot dg">★</span></td><td><span class="dot db">✓</span></td><td><span class="dot do">~</span></td><td><span class="dot dw">✗</span></td></tr>
+        <tr><td class="rl">Biomedical EE strength <a href="#biomedical">↓</a></td><td><span class="dot db">✓</span></td><td><span class="dot dg">★</span></td><td><span class="dot dg">★</span></td><td><span class="dot dw">✗</span></td></tr>
+        <tr><td class="rl">Immigration path <a href="#immigration">↓</a></td><td><span class="dot dg">★</span></td><td><span class="dot dw">✗</span></td><td><span class="dot dg">★</span></td><td><span class="dot dg">★</span></td></tr>
+        <tr><td class="rl">Weather <a href="#weather">↓</a></td><td><span class="dot db">✓</span></td><td><span class="dot dw">✗</span></td><td><span class="dot dw">✗</span></td><td><span class="dot dw">✗</span></td></tr>
+        <tr><td class="rl">Co-op &amp; internships <a href="#coop">↓</a></td><td><span class="dot db">✓</span></td><td><span class="dot db">✓</span></td><td><span class="dot db">✓</span></td><td><span class="dot dg">★</span></td></tr>
+        <tr><td class="rl">Campus &amp; social life <a href="#campus">↓</a></td><td><span class="dot dg">★</span></td><td><span class="dot db">✓</span></td><td><span class="dot do">~</span></td><td><span class="dot dw">✗</span></td></tr>
         <tr><td class="rl">Political &amp; social climate</td><td><span class="dot dg">★</span></td><td><span class="dot dw">✗</span></td><td><span class="dot dg">★</span></td><td><span class="dot dg">★</span></td></tr>
-        <tr><td class="rl">Biomedical EE strength</td><td><span class="dot db">✓</span></td><td><span class="dot dg">★</span></td><td><span class="dot dg">★</span></td><td><span class="dot dw">✗</span></td></tr>
         <tr><td class="rl">Research access (undergrad)</td><td><span class="dot db">✓</span></td><td><span class="dot dg">★</span></td><td><span class="dot db">✓</span></td><td><span class="dot do">~</span></td></tr>
         <tr><td class="rl">Grad school pathway</td><td><span class="dot db">✓</span></td><td><span class="dot dg">★</span></td><td><span class="dot dg">★</span></td><td><span class="dot do">~</span></td></tr>
         <tr><td class="rl">Space to explore &amp; reflect</td><td><span class="dot dg">★</span></td><td><span class="dot do">~</span></td><td><span class="dot do">~</span></td><td><span class="dot dw">✗</span></td></tr>
-        <tr><td class="rl">Inspiring professors (access)</td><td><span class="dot dg">★</span></td><td><span class="dot db">✓</span></td><td><span class="dot db">✓</span></td><td><span class="dot do">~</span></td></tr>
+        <tr><td class="rl">Inspiring prof access <a href="#professors">↓</a></td><td><span class="dot dg">★</span></td><td><span class="dot db">✓</span></td><td><span class="dot db">✓</span></td><td><span class="dot do">~</span></td></tr>
         <tr><td class="rl">Interdisciplinary freedom</td><td><span class="dot db">✓</span></td><td><span class="dot dg">★</span></td><td><span class="dot do">~</span></td><td><span class="dot dw">✗</span></td></tr>
         <tr><td class="rl">Mental health support</td><td><span class="dot dg">★</span></td><td><span class="dot db">✓</span></td><td><span class="dot do">~</span></td><td><span class="dot dw">✗</span></td></tr>
-        <tr><td class="rl">Vietnamese / SE Asian community</td><td><span class="dot dg">★</span></td><td><span class="dot do">~</span></td><td><span class="dot dg">★</span></td><td><span class="dot do">~</span></td></tr>
-        <tr><td class="rl">Cost value (intl tuition)</td><td><span class="dot db">✓</span></td><td><span class="dot do">~</span></td><td><span class="dot db">✓</span></td><td><span class="dot db">✓</span></td></tr>
-        <tr><td class="rl">Ethics &amp; society in curriculum</td><td><span class="dot db">✓</span></td><td><span class="dot dg">★</span></td><td><span class="dot do">~</span></td><td><span class="dot do">~</span></td></tr>
-        <tr><td class="rl">Global exchange / semester abroad</td><td><span class="dot dg">★</span></td><td><span class="dot dg">★</span></td><td><span class="dot db">✓</span></td><td><span class="dot dw">✗</span></td></tr>
+        <tr><td class="rl">Vietnamese/SE Asian community</td><td><span class="dot dg">★</span></td><td><span class="dot do">~</span></td><td><span class="dot dg">★</span></td><td><span class="dot do">~</span></td></tr>
+        <tr><td class="rl">School vibe (collaborative)</td><td><span class="dot dg">★</span></td><td><span class="dot db">✓</span></td><td><span class="dot do">~</span></td><td><span class="dot do">~</span></td></tr>
+        <tr><td class="rl">Cost value</td><td><span class="dot db">✓</span></td><td><span class="dot do">~</span></td><td><span class="dot db">✓</span></td><td><span class="dot db">✓</span></td></tr>
+        <tr><td class="rl">Ethics in curriculum</td><td><span class="dot db">✓</span></td><td><span class="dot dg">★</span></td><td><span class="dot do">~</span></td><td><span class="dot do">~</span></td></tr>
+        <tr><td class="rl">Global exchange access</td><td><span class="dot dg">★</span></td><td><span class="dot dg">★</span></td><td><span class="dot db">✓</span></td><td><span class="dot dw">✗</span></td></tr>
       </tbody>
     </table>
   </div>
   <div class="sc-leg">
     <span><span class="ld" style="background:var(--teal);color:#fff">★</span>Excellent</span>
     <span><span class="ld" style="background:var(--blue);color:#fff">✓</span>Good</span>
-    <span><span class="ld" style="background:rgba(28,26,22,0.11);color:var(--ink-3)">~</span>Moderate</span>
+    <span><span class="ld" style="background:rgba(28,26,22,.11);color:var(--ink3)">~</span>Moderate</span>
     <span><span class="ld" style="background:var(--red);color:#fff">✗</span>Weak or risky</span>
   </div>
 </section>
 
-<!-- 03 -->
-<section id="deepdives">
-  <p class="sec-tag">03 — Deep Dives</p>
-  <h2 class="sec-title">What each school really means for you</h2>
+<!-- 03 BIOMEDICAL EE DEEP DIVE -->
+<section id="biomedical">
+  <p class="stag">03 — Deep Dive: Biomedical EE</p>
+  <h2 class="stitle">Where would you actually do the most meaningful health engineering?</h2>
+  <p class="sintro">Biomedical EE is not just a ranking — it's about clinical access, research culture, faculty mentorship, and whether undergraduates are genuinely included. Here's what the data shows.</p>
 
-  <!-- UBC -->
-  <div class="dive">
-    <div class="dive-hdr">
-      <div><div class="dive-name">UBC — Vancouver</div><div class="dive-sub">University of British Columbia · Canada</div></div>
-      <span class="ov-tag tg" style="margin:0">Recommended choice</span>
+  <div class="dim-cards">
+    <div class="dc">
+      <div class="dc-head"><span class="dc-uni">UBC</span><span class="dc-stars">★★★★☆</span></div>
+      <div class="dc-text">UBC established its School of Biomedical Engineering in 2017 — the first inter-faculty school at UBC, jointly run by the Faculties of Applied Science and Medicine. The undergraduate program includes four specialisation streams: Biomechanics, Cellular &amp; Molecular, Biomedical Systems &amp; Signals, and Biomedical Informatics. Clinical partnerships with <strong>Vancouver General Hospital</strong> and <strong>BC Children's Hospital</strong> are available at the undergraduate level, and capstone projects are provided directly by local industry and research labs. Co-op placements connect students to health companies in the Vancouver-Seattle corridor.</div>
+      <span class="dc-stat st">School established 2017</span>
+      <span class="dc-stat st">4 specialisation streams</span>
+      <span class="dc-stat st">Up to 20 months co-op</span>
+      <div class="data-note">Source: UBC Engineering — Biomedical Engineering program page</div>
     </div>
-    <p class="dive-verdict">UBC offers the rarest combination for a meaning-seeker: a genuinely strong biomedical EE ecosystem, a campus environment that nurtures the whole person, Vancouver's proximity to nature, a clear immigration path to Canadian PR, and the breathing room to discover what you actually care about before you commit to it. It is not the most technically demanding — but it is the most likely place to graduate as both a capable engineer and a grounded human being.</p>
-    <div class="dim-grid">
-      <div class="dim-card"><div class="dim-label">Biomedical EE</div><div class="dim-stars">★★★★☆</div><div class="dim-text">School of Biomedical Engineering with real research in medical imaging, wearable health devices, and point-of-care diagnostics. Clinical partnerships with Vancouver General Hospital and BC Children's Hospital are accessible at the undergraduate level.</div></div>
-      <div class="dim-card"><div class="dim-label">School vibe</div><div class="dim-stars">★★★★★</div><div class="dim-text">Collaborative, diverse, internationally welcoming. Vancouver hosts one of the largest Vietnamese diaspora communities in Canada. Over 350 student clubs, robust exchange programs, and a culture that reaches toward international students.</div></div>
-      <div class="dim-card"><div class="dim-label">Staying after graduation</div><div class="dim-stars">★★★★☆</div><div class="dim-text">Canadian Post-Graduate Work Permit (PGWP) valid for up to 3 years after graduation. Clear pathway to Permanent Residency through Express Entry. No lottery — merit-based, transparent, and reliable.</div></div>
-      <div class="dim-card"><div class="dim-label">Weather</div><div class="dim-stars">★★★☆☆</div><div class="dim-text">Best of the four for someone from HCMC. Mild, rainy winters — rarely below 0°C — and warm summers. No polar vortex, no heavy snowstorms. The grey rainy season (November–March) takes adjustment but is entirely manageable.</div></div>
-      <div class="dim-card"><div class="dim-label">Space to explore</div><div class="dim-stars">★★★★★</div><div class="dim-text">Unlike Waterloo's co-op treadmill, UBC's structure gives genuine breathing room — time to take philosophy electives, pursue research with a professor whose work fascinates you, or simply think slowly about what you want to build.</div></div>
-      <div class="dim-card"><div class="dim-label">Risk to watch</div><div class="dim-stars">⚠ ⚠ ☆☆☆</div><div class="dim-text">The Vancouver/Seattle tech corridor pulls aggressively toward FAANG roles. Amazon, Microsoft, and the games industry recruit constantly. Staying on a health tech path requires intentionality — but UBC at least leaves you the room to make that choice.</div></div>
+
+    <div class="dc">
+      <div class="dc-head"><span class="dc-uni">Northwestern</span><span class="dc-stars">★★★★★</span></div>
+      <div class="dc-text">Northwestern's BME department is <strong>#12 in the US</strong> at both undergraduate and graduate levels (US News). It is co-located with the Feinberg School of Medicine and has active collaborations with <strong>Lurie Children's Hospital</strong>, <strong>Shirley Ryan AbilityLab</strong>, and <strong>Northwestern Medicine</strong>. Research areas include neural engineering, biomaterials, imaging and biophotonics, medical devices, and computational biomedical engineering. Undergraduates can engage in lab research from freshman year; some students may get involved as early as first year. The curriculum requires 48 courses with a global health capstone focused on improving healthcare in low-resource settings. A combined BS/MS program allows exceptional undergrads to earn both degrees simultaneously.</div>
+      <span class="dc-stat sb">#12 US BME undergrad (US News)</span>
+      <span class="dc-stat sb">Global Health capstone</span>
+      <span class="dc-stat sb">Research possible from Year 1</span>
+      <div class="data-note">Source: Northwestern McCormick Quick Facts; Undergraduate BME program page</div>
     </div>
-    <div class="chips"><span class="chip cg">clean energy</span><span class="chip cg">medical imaging</span><span class="chip cg">wearable devices</span><span class="chip cg">ocean sensing</span><span class="chip cg">global health EE</span><span class="chip ca">Vancouver tech pull</span></div>
+
+    <div class="dc">
+      <div class="dc-head"><span class="dc-uni">UofT</span><span class="dc-stars">★★★★★</span></div>
+      <div class="dc-text">UofT's Institute of Biomedical Engineering is the <strong>largest biomedical engineering hub in Canada</strong>, managed jointly by three faculties (Applied Science &amp; Engineering, Medicine, and Dentistry). It has <strong>40+ core faculty</strong>, <strong>60+ affiliated faculty</strong>, and partnerships with <strong>10 partner hospitals</strong> including Toronto General, SickKids, and Sunnybrook. The undergraduate Biomedical Systems Engineering major (within Engineering Science) was the first of its kind in Canada. Over half of recent grads from this major work in biomedical, biotechnology, or healthcare fields. More than 1,100 BME alumni work at organisations including Google, Apple, Sanofi, and Boston Scientific.</div>
+      <span class="dc-stat sa">Largest BME hub in Canada</span>
+      <span class="dc-stat sa">10 partner hospitals</span>
+      <span class="dc-stat sa">40+ core faculty</span>
+      <div class="data-note">Sources: UofT BME Institute; Engineering Science Biomedical Systems page</div>
+    </div>
+
+    <div class="dc">
+      <div class="dc-head"><span class="dc-uni">Waterloo</span><span class="dc-stars">★★☆☆☆</span></div>
+      <div class="dc-text">Waterloo does not have a dedicated biomedical engineering undergraduate program. Students interested in health technology typically enrol in <strong>Systems Design Engineering</strong> or <strong>Electrical Engineering</strong> and self-navigate toward biomedical applications. The university has growing research in quantum computing, hardware, and embedded systems — all strong — but the biomedical culture, clinical partnerships, and faculty density in health tech are significantly weaker than the other three schools. Pursuing biomedical EE at Waterloo means working against the program's default orientation.</div>
+      <span class="dc-stat sr">No dedicated BME undergraduate program</span>
+      <span class="dc-stat sr">Oriented toward hardware &amp; software</span>
+      <div class="data-note">Source: Waterloo undergraduate program listings</div>
+    </div>
   </div>
 
-  <!-- Northwestern -->
-  <div class="dive">
-    <div class="dive-hdr">
-      <div><div class="dive-name">Northwestern — Evanston</div><div class="dive-sub">Northwestern University · United States</div></div>
-      <span class="ov-tag bg" style="margin:0">Best academic fit — with major caveats</span>
-    </div>
-    <div class="warn"><strong>Critical 2026 warning:</strong> The US government significantly increased international student visa scrutiny in 2025, revoking thousands of F-1 visas without due process. New rules effective February 2026 actively disadvantage international graduates seeking US employment visas. The H-1B lottery remains uncertain. The path to staying in the US is genuinely precarious in a way Canada's is not. Factor this very heavily.</div>
-    <p class="dive-verdict">If the US political context were different, Northwestern would be the answer — full stop. Its biomedical EE ecosystem is world-class, its interdisciplinary curriculum is genuinely rare in engineering education, and clinical access through Northwestern Memorial Hospital is unmatched at the undergraduate level. The tragedy is that the environment surrounding it makes it difficult to build meaning without constant anxiety about your future in the country.</p>
-    <div class="dim-grid">
-      <div class="dim-card"><div class="dim-label">Biomedical EE</div><div class="dim-stars">★★★★★</div><div class="dim-text">McCormick School integrated with Feinberg School of Medicine and Northwestern Memorial Hospital. Neuroengineering, brain-computer interfaces, neural prosthetics, and global health technology are world-class strengths. Undergrads publish papers alongside faculty.</div></div>
-      <div class="dim-card"><div class="dim-label">Interdisciplinary freedom</div><div class="dim-stars">★★★★★</div><div class="dim-text">Quarter system with genuine distribution requirements in humanities, social sciences, and arts. Engineering for humanity is an institutional priority, not a checkbox. The most intellectually rich of the four schools by a clear margin.</div></div>
-      <div class="dim-card"><div class="dim-label">Staying after graduation</div><div class="dim-stars">★☆☆☆☆</div><div class="dim-text">3 years OPT/STEM-OPT after graduation, then dependent on the H-1B lottery. New 2026 rules actively disadvantage international graduates at entry level. High financial and career risk that cannot be ignored when making this decision.</div></div>
-      <div class="dim-card"><div class="dim-label">Weather</div><div class="dim-stars">★☆☆☆☆</div><div class="dim-text">Lake Michigan Polar Vortex — temperatures regularly hit −20°C with wind chill. Among the worst winters in North America. A severe shock for someone from HCMC; this is not a minor inconvenience and should not be underestimated.</div></div>
-      <div class="dim-card"><div class="dim-label">Inspiring professors</div><div class="dim-stars">★★★★☆</div><div class="dim-text">Prof. John A. Rogers — elected to all three US National Academies (Engineering, Science, and Medicine). Builds wireless skin sensors deployed for premature babies and maternal care clinics in Zambia, Ghana, and India. A genuinely inspiring figure with a humanitarian mission.</div></div>
-      <div class="dim-card"><div class="dim-label">Political climate</div><div class="dim-stars">★☆☆☆☆</div><div class="dim-text">Federal rollbacks on civil liberties and immigrant protections in 2025–26 create a social climate at odds with your stated values. You said you're not comfortable with oppressiveness "even if it befalls only others." This should weigh heavily.</div></div>
-    </div>
-    <div class="chips"><span class="chip cg">neuroengineering</span><span class="chip cg">medical devices</span><span class="chip cg">global health tech</span><span class="chip cg">photonics</span><span class="chip cr">H-1B lottery risk</span><span class="chip cr">hostile political climate</span><span class="chip cr">extreme winter cold</span></div>
-  </div>
-
-  <!-- UofT -->
-  <div class="dive">
-    <div class="dive-hdr">
-      <div><div class="dive-name">UofT — Toronto</div><div class="dive-sub">University of Toronto · Canada</div></div>
-      <span class="ov-tag ag" style="margin:0">Strong if research-bound</span>
-    </div>
-    <p class="dive-verdict">UofT is Canada's most globally prestigious university and has one of the strongest biomedical research ecosystems in the country. If you end up wanting a PhD, the name recognition and research experience you build here will open doors worldwide. The challenge is scale: with 15,000 engineering students, meaningful experiences require more self-initiation than at UBC or Northwestern.</p>
-    <div class="dim-grid">
-      <div class="dim-card"><div class="dim-label">Biomedical EE</div><div class="dim-stars">★★★★★</div><div class="dim-text">Institute of Biomedical Engineering affiliated with Toronto General, SickKids, and Sunnybrook hospitals. AI for health, robotics, and medical devices at scale. Clinical translation — devices going from lab to patient — happens here in ways few other universities can match.</div></div>
-      <div class="dim-card"><div class="dim-label">Grad school pathway</div><div class="dim-stars">★★★★★</div><div class="dim-text">Top 20 globally. A UofT undergraduate degree carries significant weight for PhD applications worldwide. The strongest of the four for this specific pathway, if graduate research becomes your firm goal.</div></div>
-      <div class="dim-card"><div class="dim-label">School vibe</div><div class="dim-stars">★★★☆☆</div><div class="dim-text">Large and urban — the campus blends into downtown Toronto. Social life takes effort to find. Not impersonal if you seek out community, but the university will not come to you automatically. Requires self-direction.</div></div>
-      <div class="dim-card"><div class="dim-label">Weather</div><div class="dim-stars">★☆☆☆☆</div><div class="dim-text">True Ontario winter: −15 to −25°C with wind chill, heavy snow from November to March, grey skies for months. Brutal for someone from HCMC. Toronto's rich urban life partially compensates, but the cold is genuinely difficult.</div></div>
-      <div class="dim-card"><div class="dim-label">SE Asian community</div><div class="dim-stars">★★★★☆</div><div class="dim-text">Toronto has one of North America's largest Vietnamese and Southeast Asian communities. Excellent food, cultural events, and language support. Even if staying connected isn't your priority now, having that community available matters during difficult stretches.</div></div>
-      <div class="dim-card"><div class="dim-label">PEY internship</div><div class="dim-stars">★★★★☆</div><div class="dim-text">Professional Experience Year: a structured 12–16 month internship after third year. Deep and meaningful if you choose a clinically adjacent placement — but you only get one extended opportunity, not Waterloo's six rotations.</div></div>
-    </div>
-    <div class="chips"><span class="chip cg">AI for health</span><span class="chip cg">robotics</span><span class="chip cg">clinical translation</span><span class="chip cg">global prestige</span><span class="chip ca">scale requires initiative</span><span class="chip cr">harsh winters</span></div>
-  </div>
-
-  <!-- Waterloo -->
-  <div class="dive">
-    <div class="dive-hdr">
-      <div><div class="dive-name">Waterloo — Ontario</div><div class="dive-sub">University of Waterloo · Canada</div></div>
-      <span class="ov-tag rg" style="margin:0">Misaligned with your goals</span>
-    </div>
-    <p class="dive-verdict">Waterloo is exceptional at what it does — producing technically excellent, industry-ready engineers with outstanding job placement rates. But what it does is different from what you are looking for. The co-op treadmill optimizes for output, not reflection or meaning. Students who thrive here arrive already knowing what they want to build. You said you want to explore — and Waterloo is not built for exploration.</p>
-    <div class="dim-grid">
-      <div class="dim-card"><div class="dim-label">Co-op &amp; jobs</div><div class="dim-stars">★★★★★</div><div class="dim-text">Unmatched in Canada. Six co-op rotations (20 months total paid work experience). 96.8% employment rate. Google, NVIDIA, Tesla, Apple recruit directly. ~70% of international graduates secure Canadian Permanent Residency — double the national university average.</div></div>
-      <div class="dim-card"><div class="dim-label">Biomedical EE</div><div class="dim-stars">★★☆☆☆</div><div class="dim-text">Not a natural home for biomedical EE. Systems Design Engineering has some health flavour, but the culture is oriented firmly toward hardware, software, and semiconductors. You would be working against the current to pursue health tech here.</div></div>
-      <div class="dim-card"><div class="dim-label">Space to explore</div><div class="dim-stars">★☆☆☆☆</div><div class="dim-text">The alternating school/work term structure leaves almost no room for slow thinking or self-discovery. The co-op calendar makes international exchanges nearly impossible without extending your degree by a term or more.</div></div>
-      <div class="dim-card"><div class="dim-label">School vibe</div><div class="dim-stars">★★☆☆☆</div><div class="dim-text">"Work hard, play hard" — but mostly work. Students seeking strong school spirit, social life, or a traditional university experience will find Waterloo lacking. The city itself is small and not particularly stimulating for someone from HCMC.</div></div>
-      <div class="dim-card"><div class="dim-label">Mental health</div><div class="dim-stars">★☆☆☆☆</div><div class="dim-text">Waterloo has well-documented struggles in this area. High academic pressure combined with limited support infrastructure is a real risk, especially for international students navigating a cold, unfamiliar environment for the first time.</div></div>
-      <div class="dim-card"><div class="dim-label">Weather</div><div class="dim-stars">★☆☆☆☆</div><div class="dim-text">Full Ontario winter without Toronto's compensating city life. Wind chills of −20°C, months of heavy snow, grey skies from November to March. The most challenging environment of the four schools for someone from HCMC.</div></div>
-    </div>
-    <div class="chips"><span class="chip cg">hardware EE</span><span class="chip cg">semiconductors</span><span class="chip cg">embedded systems</span><span class="chip cg">co-op network</span><span class="chip cr">wrong culture for meaning-seeking</span><span class="chip cr">no room to explore</span><span class="chip cr">mental health risk</span></div>
+  <div class="insight">
+    <div class="ins-label">Bottom line</div>
+    <p>For biomedical EE specifically, Northwestern is academically the most powerful environment — but UofT is Canada's strongest, and UBC gives you meaningful clinical access with more space to explore before you specialise. Waterloo is the wrong place for this path.</p>
   </div>
 </section>
 
-<!-- 04 -->
+<!-- 04 IMMIGRATION DEEP DIVE -->
+<section id="immigration">
+  <p class="stag">04 — Deep Dive: Immigration &amp; Staying After Graduation</p>
+  <h2 class="stitle">Can you actually build your life in this country after you graduate?</h2>
+  <p class="sintro">Immigration is not a secondary consideration — it determines whether the life you build over four years has a future beyond graduation day. Here's the real picture for each country.</p>
+
+  <div class="dim-cards" style="margin-bottom:32px">
+    <div class="dc rec">
+      <div class="dc-head"><span class="dc-uni">Canada (UBC, UofT, Waterloo)</span><span class="dc-stars">★★★★☆</span></div>
+      <div class="dc-text">Graduates from all three Canadian schools follow the same federal pathway. The <strong>Post-Graduate Work Permit (PGWP)</strong> allows you to work for any employer, anywhere in Canada, for up to 3 years after graduation. PGWP work experience then directly feeds into <strong>Express Entry's Canadian Experience Class (CEC)</strong> — Canada's merit-based immigration system for skilled workers. Engineering (NOC TEER 2) is a qualifying occupation. Engineering graduates are in demand, and Canada has sector-specific Express Entry draws favouring healthcare and technology. <strong>70% of international Waterloo graduates become permanent residents</strong> (vs. ~30% national average), demonstrating how effective this pathway is for STEM graduates in Canada generally.</div>
+      <span class="dc-stat st">PGWP: up to 3 years</span>
+      <span class="dc-stat st">Express Entry: merit-based, no lottery</span>
+      <span class="dc-stat st">70% PR rate at Waterloo (STEM avg)</span>
+      <div class="data-note">Sources: IRCC PGWP guidelines 2025; Canada PR pathway analysis; Waterloo international graduate PR study</div>
+    </div>
+
+    <div class="dc">
+      <div class="dc-head"><span class="dc-uni">United States (Northwestern)</span><span class="dc-stars">★☆☆☆☆</span></div>
+      <div class="dc-text">After graduation, F-1 students can work for <strong>1 year (OPT)</strong>, extended to <strong>3 years for STEM graduates</strong> (STEM OPT). After that, staying requires winning the <strong>H-1B visa lottery</strong> — a random selection with approximately a 1-in-5 to 1-in-4 chance each year. In 2025, the situation significantly worsened: ICE terminated over <strong>4,700 SEVIS records</strong> of international students without due process. The Department of State revoked over <strong>300+ student visas</strong> citing vague "foreign policy" concerns. Social media posts were used as grounds for revocation. A worldwide freeze on new student visa interviews was imposed in May 2025. As of March 2026, there is active US government review of whether to reform or <em>end</em> the OPT programme entirely. The immigration risk is not theoretical — it is documented and ongoing.</div>
+      <span class="dc-stat sr">4,700+ SEVIS terminations in 2025</span>
+      <span class="dc-stat sr">H-1B: ~1 in 4 lottery odds</span>
+      <span class="dc-stat sr">OPT programme under active review</span>
+      <div class="data-note">Sources: NAFSA analysis; Presidents' Alliance tracking; AILA; Inside Higher Ed revocation database; ICEF Monitor Mar 2026</div>
+    </div>
+  </div>
+
+  <div class="stag" style="margin-bottom:14px">Canada pathway step by step</div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot">1</div>
+      <div class="tl-content"><div class="tl-step">Graduate (Year 4+)</div><div class="tl-desc">Apply for Post-Graduate Work Permit within 180 days of graduation. Duration matches your program length — a 4-year degree gives you a 3-year PGWP.</div></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot">2</div>
+      <div class="tl-content"><div class="tl-step">Work on PGWP (Years 5–7)</div><div class="tl-desc">Work for any employer in any province. Engineering roles classify as TEER 2 occupations — the tier required for Express Entry. During this time, build your Comprehensive Ranking System (CRS) score.</div></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot">3</div>
+      <div class="tl-content"><div class="tl-step">Express Entry (Canadian Experience Class)</div><div class="tl-desc">After 12 months of skilled Canadian work experience, submit your Express Entry profile. CEC draws in 2024–25 required CRS scores of ~490–540. Canadian education and bilingualism (French) can significantly boost your score.</div></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot">4</div>
+      <div class="tl-content"><div class="tl-step">Provincial Nominee Programme (Booster)</div><div class="tl-desc">BC PNP (for UBC grads) and Ontario PNP (for UofT/Waterloo grads) have streams specifically for international graduates. A provincial nomination adds 600 CRS points — effectively guaranteeing an Express Entry invitation.</div></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot">5</div>
+      <div class="tl-content"><div class="tl-step">Permanent Residency</div><div class="tl-desc">PR processing through Express Entry typically takes 6 months. PR gives you the right to live and work anywhere in Canada permanently, sponsor family members, and eventually apply for citizenship after 3 years of residency.</div></div>
+    </div>
+  </div>
+
+  <div class="warn" style="margin-top:28px"><strong>Northwestern warning (current as of March 2026):</strong> US student visa issuances fell 36% in summer 2025. Interest in US postgraduate education dropped 40% since January 2025 (NAFSA). The OPT programme that allows international graduates to work in the US before the H-1B lottery is under active government review for reform or termination. Social media is now screened for visa applications. These are not political opinions — they are documented policy developments with measurable impact on thousands of students already enrolled.</div>
+</section>
+
+<!-- 05 WEATHER DEEP DIVE -->
+<section id="weather">
+  <p class="stag">05 — Deep Dive: Weather</p>
+  <h2 class="stitle">What will the climate actually feel like coming from Ho Chi Minh City?</h2>
+  <p class="sintro">HCMC sits at 10.8°N with an average annual temperature of 28°C and rarely falls below 20°C even at night. Here is what each university city actually feels like, by the numbers.</p>
+
+  <div class="sc-wrap" style="margin-bottom:24px">
+    <table class="wtable">
+      <thead><tr><th>Month</th><th>HCMC (°C)</th><th>Vancouver (°C)</th><th>Evanston IL (°C)</th><th>Toronto (°C)</th><th>Waterloo (°C)</th></tr></thead>
+      <tbody>
+        <tr><td>January</td><td class="temp-ok">27</td><td class="temp-mild">4.7 / 1.9</td><td class="temp-cold">-2 / -9</td><td class="temp-cold">-1 / -7</td><td class="temp-cold">-3 / -10</td></tr>
+        <tr><td>February</td><td class="temp-ok">28</td><td class="temp-mild">6 / 2</td><td class="temp-cold">0 / -8</td><td class="temp-cold">0 / -7</td><td class="temp-cold">-1 / -9</td></tr>
+        <tr><td>March</td><td class="temp-ok">29</td><td class="temp-mild">9 / 4</td><td class="temp-mild">5 / -3</td><td class="temp-mild">5 / -2</td><td class="temp-mild">4 / -3</td></tr>
+        <tr><td>April</td><td class="temp-ok">30</td><td class="temp-mild">13 / 6</td><td class="temp-mild">12 / 3</td><td class="temp-mild">12 / 2</td><td class="temp-mild">12 / 2</td></tr>
+        <tr><td>May</td><td class="temp-ok">31</td><td class="temp-mild">17 / 9</td><td class="temp-ok">18 / 9</td><td class="temp-ok">18 / 8</td><td class="temp-ok">18 / 8</td></tr>
+        <tr><td>Jun–Aug</td><td class="temp-ok">31–32</td><td class="temp-ok">22 / 13</td><td class="temp-ok">26 / 17</td><td class="temp-ok">26 / 16</td><td class="temp-ok">25 / 15</td></tr>
+        <tr><td>September</td><td class="temp-ok">30</td><td class="temp-ok">18 / 11</td><td class="temp-ok">21 / 12</td><td class="temp-ok">20 / 12</td><td class="temp-ok">20 / 11</td></tr>
+        <tr><td>October</td><td class="temp-ok">28</td><td class="temp-mild">13 / 7</td><td class="temp-mild">14 / 6</td><td class="temp-mild">13 / 5</td><td class="temp-mild">12 / 4</td></tr>
+        <tr><td>November</td><td class="temp-ok">27</td><td class="temp-mild">8 / 4</td><td class="temp-cold">5 / -2</td><td class="temp-cold">5 / -1</td><td class="temp-cold">4 / -2</td></tr>
+        <tr><td>December</td><td class="temp-ok">26</td><td class="temp-mild">5 / 2</td><td class="temp-cold">-1 / -8</td><td class="temp-cold">-1 / -7</td><td class="temp-cold">-3 / -10</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="data-note" style="margin-bottom:24px">All temperatures: average high / average low in °C. Sources: Weather Atlas, Climate-Data.org, Wikipedia Climate of Vancouver. Wind chill in Evanston, Toronto, and Waterloo regularly pushes feels-like temperatures 8–12°C lower in January–February.</p>
+
+  <div class="dim-cards">
+    <div class="dc rec">
+      <div class="dc-head"><span class="dc-uni">Vancouver (UBC)</span><span class="dc-stars">★★★☆☆</span></div>
+      <div class="dc-text">Vancouver has a temperate oceanic climate — the <strong>only major Canadian city where temperatures stay above freezing all winter</strong>. January averages 7°C high / 2°C low. You will not encounter the −20°C wind chill of Ontario or Chicago. Winters are long, grey, and rainy (70%+ cloud cover Nov–Feb), which takes psychological adjustment — but the cold is minimal. Snow is rare; in 2015 Vancouver recorded an entire year with no measurable snow. Summers are genuinely beautiful: 22°C, sunny, with access to mountains and ocean.</div>
+      <span class="dc-stat st">Jan average: 7°C / 2°C</span>
+      <span class="dc-stat st">Only ~8.7 snow days/year</span>
+      <span class="dc-stat st">No freezing winters (unique in Canada)</span>
+    </div>
+    <div class="dc">
+      <div class="dc-head"><span class="dc-uni">Evanston (Northwestern)</span><span class="dc-stars">★☆☆☆☆</span></div>
+      <div class="dc-text">Lake Michigan amplifies Chicago's winter. The Polar Vortex — a phenomenon where Arctic air descends directly into the Great Lakes region — regularly produces <strong>wind chill of −20°C to −35°C</strong> for days at a time in January and February. January averages −2°C high / −9°C low, but the feels-like temperature is significantly colder. For someone from a tropical climate, this is not merely an inconvenience — it is a genuine health and wellbeing risk requiring significant acclimatisation, proper clothing expenditure, and mental preparation.</div>
+      <span class="dc-stat sr">Jan wind chill: can reach −25 to −35°C</span>
+      <span class="dc-stat sr">Polar Vortex events several times per winter</span>
+    </div>
+    <div class="dc">
+      <div class="dc-head"><span class="dc-uni">Toronto (UofT)</span><span class="dc-stars">★☆☆☆☆</span></div>
+      <div class="dc-text">Toronto winters are harsh: January averages −1°C high / −7°C low, with wind chills that regularly reach −15°C to −20°C. Heavy snowfall from November through March. Toronto does compensate with <strong>urban life</strong> — excellent restaurants, culture, and the Vietnamese community on Spadina Ave — but the cold itself is severe for someone from HCMC. The PATH underground walkway (a 30km underground shopping network) helps students avoid the worst days.</div>
+      <span class="dc-stat sr">Jan avg: −1°C / −7°C</span>
+      <span class="dc-stat sr">Heavy snow: Nov–Mar</span>
+    </div>
+    <div class="dc">
+      <div class="dc-head"><span class="dc-uni">Waterloo</span><span class="dc-stars">★☆☆☆☆</span></div>
+      <div class="dc-text">Waterloo is slightly colder than Toronto and has none of Toronto's urban compensations. January averages −3°C / −10°C with consistent heavy snow. The co-op treadmill also means you will not have summers free to enjoy warm weather — alternating terms keep you on campus or working through all seasons without a long break. The combination of Ontario winter cold, a small city, and a relentless work schedule makes this the most physically and psychologically challenging weather situation of the four.</div>
+      <span class="dc-stat sr">Jan avg: −3°C / −10°C</span>
+      <span class="dc-stat sr">Small city — no urban compensations</span>
+    </div>
+  </div>
+</section>
+
+<!-- 06 CO-OP & JOBS DEEP DIVE -->
+<section id="coop">
+  <p class="stag">06 — Deep Dive: Co-op &amp; Internships</p>
+  <h2 class="stitle">Where will you get the best work experience — and the right kind?</h2>
+  <p class="sintro">Raw employment rates matter less than whether the jobs available align with your goals. Here's the data on quality and quantity of work experience at each school.</p>
+
+  <div class="dim-cards">
+    <div class="dc rec">
+      <div class="dc-head"><span class="dc-uni">UBC</span><span class="dc-stars">★★★★☆</span></div>
+      <div class="dc-text">UBC's Applied Science Co-op gives students <strong>up to 20 months of paid work experience</strong> across multiple terms, and is optional — meaning you control how it integrates with your degree. The Vancouver-Seattle corridor provides strong access to health tech, clean energy, and ocean technology companies alongside Amazon, Microsoft, and EA. UBC's biomedical placements connect students to hospitals and health companies directly. You can also combine co-op with exchange semesters in a way Waterloo cannot. Capstone projects are provided by local industry and engineering research labs — often clinically adjacent for biomedical students.</div>
+      <span class="dc-stat st">Up to 20 months work experience</span>
+      <span class="dc-stat st">Optional — fits with exchange &amp; exploration</span>
+      <span class="dc-stat st">Health tech &amp; hospital placements available</span>
+    </div>
+    <div class="dc">
+      <div class="dc-head"><span class="dc-uni">Northwestern</span><span class="dc-stars">★★★★☆</span></div>
+      <div class="dc-text">McCormick's Co-operative Engineering Education Program offers up to <strong>18 months of engineering experience</strong> in industry. The BME department specifically lists clinical and hospital internship connections, including placements designing devices for jaundice treatment in developing countries and working with Hollister Inc. on wound healing. Chicago's biomedical and pharmaceutical sector (Baxter, Abbott, Abbvie) is directly accessible. The Global Healthcare Technologies study abroad program in South Africa is popular among BME students.</div>
+      <span class="dc-stat sb">Up to 18 months co-op</span>
+      <span class="dc-stat sb">Chicago pharma/medtech cluster nearby</span>
+      <span class="dc-stat sb">Global Health electives &amp; capstone</span>
+    </div>
+    <div class="dc">
+      <div class="dc-head"><span class="dc-uni">UofT</span><span class="dc-stars">★★★★☆</span></div>
+      <div class="dc-text">UofT's Professional Experience Year (PEY) Co-op is a structured <strong>12–16 month internship</strong> taken after third year — a single, deep placement rather than multiple short rotations. Past PEY placements for Biomedical Systems Engineering students include Harvard Medical School, Princess Margaret Cancer Centre, Sunnybrook Research Institute, and University Health Network. Over half of biomedical systems students complete a PEY co-op. The depth of a 12+ month placement in a research hospital can be transformative for someone interested in health tech.</div>
+      <span class="dc-stat sa">12–16 month PEY placement</span>
+      <span class="dc-stat sa">Hospital placements: Harvard Med, SickKids, UHN</span>
+      <span class="dc-stat sa">50%+ of BME students do PEY</span>
+    </div>
+    <div class="dc">
+      <div class="dc-head"><span class="dc-uni">Waterloo</span><span class="dc-stars">★★★★★</span></div>
+      <div class="dc-text">Waterloo's co-op program is objectively the largest and most structured in North America: <strong>6 rotations, up to 24 months, 8,000 employers in 70+ countries</strong>. The Fall 2024 employment rate was <strong>96.8%</strong>. Students typically earn CAD $9,600–$22,800 per 4-month term. Top employers include Google, NVIDIA, Tesla, Apple, and dozens of Canadian banks and tech firms. The catch: the program is a treadmill that leaves no room for exploration, and almost all elite placements are in software and hardware — not biomedical. If your goal is maximising career-launch speed in tech, Waterloo is unmatched. If your goal is health tech with time to think, it is the wrong structure.</div>
+      <span class="dc-stat sr">96.8% employment rate (Fall 2024)</span>
+      <span class="dc-stat sr">6 rotations, 8,000 employers</span>
+      <span class="dc-stat sa">Placements skew toward software/hardware, not health</span>
+    </div>
+  </div>
+
+  <div class="insight">
+    <div class="ins-label">The real question to ask</div>
+    <p>A co-op's value is not measured in months worked — it's measured in whether the work brought you closer to the problems you care about. A single 12-month placement at a children's hospital research lab may change you more than four tech internships combined.</p>
+  </div>
+</section>
+
+<!-- 07 CAMPUS LIFE -->
+<section id="campus">
+  <p class="stag">07 — Deep Dive: Campus &amp; Social Life</p>
+  <h2 class="stitle">Where will you thrive as a person, not just as an engineer?</h2>
+  <p class="sintro">Engineering takes four years. Who you become in those four years depends as much on what happens outside the classroom as inside it.</p>
+
+  <div class="dim-cards">
+    <div class="dc rec">
+      <div class="dc-head"><span class="dc-uni">UBC</span><span class="dc-stars">★★★★★</span></div>
+      <div class="dc-text">UBC has <strong>350+ student clubs</strong>, one of the largest Vietnamese and Southeast Asian diaspora communities in Canada, and a campus physically situated between mountains and ocean. The university actively recruits international students and has strong mental health infrastructure. UBC was the <strong>first university in North America to commit to implementing the UN Declaration on the Rights of Indigenous Peoples</strong>, signalling an institutional culture of inclusion. The Biomedical Engineering Undergraduate Student Association (BMEUSA) provides direct peer community within the program. Global exchange programs are available and encouraged.</div>
+      <span class="dc-stat st">350+ student clubs</span>
+      <span class="dc-stat st">Strong international student community</span>
+      <span class="dc-stat st">Mountains + ocean campus setting</span>
+    </div>
+    <div class="dc">
+      <div class="dc-head"><span class="dc-uni">Northwestern</span><span class="dc-stars">★★★★☆</span></div>
+      <div class="dc-text">Northwestern has a genuinely collaborative engineering culture. The McCormick School's Biomedical Engineering Student Chapter, Medical Makers group, and numerous engineering student organisations create meaningful community. Chicago access (30 min by train) adds urban richness. The quarter system creates a fast pace, but also generates strong cohort bonds. The Global Healthcare Technologies program in South Africa and extensive study abroad options provide global experience. The main concern for campus life is the current political environment — some students report self-censorship and anxiety about visa status affecting their ability to engage fully in campus political and social life.</div>
+      <span class="dc-stat sb">Active BME student organisations</span>
+      <span class="dc-stat sb">Chicago access by train</span>
+      <span class="dc-stat sb">Study abroad in South Africa (BME-specific)</span>
+    </div>
+    <div class="dc">
+      <div class="dc-head"><span class="dc-uni">UofT</span><span class="dc-stars">★★★☆☆</span></div>
+      <div class="dc-text">UofT is Canada's most prestigious university — but its scale (90,000+ students across all campuses) can feel impersonal. The St. George campus blends into downtown Toronto, which means there is no distinct "campus bubble." Social life requires more initiative than at UBC. Toronto itself, however, offers extraordinary cultural richness and the largest Vietnamese diaspora in Ontario. The BME student clubs (CUBE, UT BIOME, iGEM Toronto) provide a more intimate community within the larger university. Student retention rate is 94.1%, suggesting most students adapt successfully.</div>
+      <span class="dc-stat sa">90,000+ total students — scale challenge</span>
+      <span class="dc-stat sa">Toronto's Vietnamese community on Spadina Ave</span>
+      <span class="dc-stat sa">BME-specific clubs: CUBE, UT BIOME</span>
+    </div>
+    <div class="dc">
+      <div class="dc-head"><span class="dc-uni">Waterloo</span><span class="dc-stars">★★☆☆☆</span></div>
+      <div class="dc-text">Waterloo has <strong>200+ clubs</strong> and the Student Life Centre operates 24/7, but the alternating school/work structure means campus community is fragmented — half your cohort is on co-op while you're in class and vice versa. The city of Waterloo is small (population ~150,000) and not particularly stimulating. Mental health struggles at Waterloo are well-documented; the pressure-to-support ratio is among the worst of the four schools. Students who find deep meaning at Waterloo tend to be those who enter knowing exactly what they want and thrive in high-output, low-reflection environments.</div>
+      <span class="dc-stat sr">Community fragmented by co-op schedule</span>
+      <span class="dc-stat sr">Well-documented mental health pressures</span>
+      <span class="dc-stat sr">Small city — limited external stimulation</span>
+    </div>
+  </div>
+</section>
+
+<!-- 08 MEANINGFUL WORK -->
 <section id="meaning">
-  <p class="sec-tag">04 — Meaningful Work</p>
-  <h2 class="sec-title">Engineering that nurtures the soul</h2>
+  <p class="stag">08 — Meaningful Work</p>
+  <h2 class="stitle">Engineering that nurtures the soul</h2>
+
   <div class="insight">
     <div class="ins-label">A truth worth sitting with</div>
     <p>Meaningful work in engineering comes from one of three sources: working on problems that clearly matter, working with people who share your values, or working at the frontier of something you find genuinely beautiful and mysterious. UBC gives you the first and second. Northwestern gives you the second and third. UofT gives you the third if you fight for it. Waterloo gives you a very good career.</p>
   </div>
+
   <div class="mg">
     <div class="mc" style="border-top:3px solid var(--teal)"><div class="mc-title">UBC — exploration-first</div><div class="mc-text">Best for someone who says "I want to explore more." The environment, breathing room, and ethical engineering culture make it the most likely place to graduate knowing <em>why</em> you build what you build — not just how.</div></div>
     <div class="mc" style="border-top:3px solid var(--blue)"><div class="mc-title">Northwestern — depth-first</div><div class="mc-text">Best if your version of meaning is intellectual richness and the most ambitious frontier of engineering. Humanities requirements and medical integration make for a genuinely rare education — if you can navigate the surrounding political context.</div></div>
-    <div class="mc" style="border-top:3px solid var(--amber)"><div class="mc-title">UofT — research-first</div><div class="mc-text">Best if meaning comes from understanding something deeply and advancing the frontier of knowledge. World-class biomedical research, accessible to self-directed undergraduates who seek it out actively.</div></div>
+    <div class="mc" style="border-top:3px solid var(--amber)"><div class="mc-title">UofT — research-first</div><div class="mc-text">Best if meaning comes from understanding something deeply and advancing the frontier of knowledge. World-class biomedical research, accessible to self-directed undergraduates who pursue it actively.</div></div>
     <div class="mc" style="border-top:3px solid var(--red)"><div class="mc-title">Waterloo — output-first</div><div class="mc-text">Optimized for career outcomes, not self-discovery. Works best for those who already know exactly what they want to build. If you need to find out what calls to you — and you do — this is the wrong environment.</div></div>
   </div>
 </section>
 
-<!-- 05 -->
+<!-- 09 PROFESSORS -->
 <section id="professors">
-  <p class="sec-tag">05 — Inspiring Professors</p>
-  <h2 class="sec-title">Real people whose work might stop you mid-scroll</h2>
-  <p class="sec-intro">Before you finalize your decision, find each professor's lab website, read one recent paper, and notice how you feel — not whether you understand everything, but whether something in you leans forward. That instinct is worth paying attention to.</p>
+  <p class="stag">09 — Inspiring Professors</p>
+  <h2 class="stitle">Real people whose work might stop you mid-scroll</h2>
+  <p class="sintro">Before you finalise your decision, find each professor's lab website, read one recent paper, and notice how you feel — not whether you understand everything, but whether something in you leans forward.</p>
   <div class="pg">
     <div class="pc">
       <div class="pc-name">Purang Abolmaesumi</div>
       <div class="pc-role">UBC · Biomedical Imaging &amp; Machine Learning</div>
       <div class="pc-focus">Medical imaging, machine learning at scale, image-guided diagnosis and interventions. His ultrasound image segmentation techniques rank among the top ten most influential in the field, applied to prostate cancer detection on over 1,000 patients at the BC Cancer Agency.</div>
-      <div class="pc-why">Winner of UBC's Killam Award for Excellence in Mentoring — recognized not just for research output but for how he develops students. As an undergraduate, you could realistically email him and build a genuine relationship.</div>
+      <div class="pc-why">Winner of UBC's Killam Award for Excellence in Mentoring — recognised not just for research output but for how he develops students. As an undergraduate, you could realistically email him and build a genuine relationship.</div>
     </div>
     <div class="pc">
       <div class="pc-name">John A. Rogers</div>
       <div class="pc-role">Northwestern · Bioelectronics &amp; Wearable Devices</div>
-      <div class="pc-focus">Nano and molecular scale fabrication for bio-integrated systems. Built wireless skin-compatible sensors validated on premature babies at Lurie Children's Hospital, and deployed maternal monitoring devices in Zambia, Ghana, and India to address high rates of maternal mortality.</div>
-      <div class="pc-why">Elected to all three US National Academies — Engineering, Science, and Medicine — one of only a handful of people in history. His lab's explicit goal is making clinical-grade health monitoring available to people who currently have none.</div>
+      <div class="pc-focus">Nano and molecular scale fabrication for bio-integrated systems. Built wireless skin-compatible sensors validated on premature babies at Lurie Children's Hospital, and deployed maternal monitoring devices in Zambia, Ghana, and India. Northwestern's own department website highlights his "pop-up" device for mapping neural organoids.</div>
+      <div class="pc-why">Elected to all three US National Academies — Engineering, Science, and Medicine. His lab's explicit goal is making clinical-grade health monitoring available to people who currently have none. Undergraduates reach him through the BME 399/499 research pathway.</div>
     </div>
     <div class="pc">
       <div class="pc-name">UofT Biomedical Faculty</div>
       <div class="pc-role">UofT · Institute of Biomedical Engineering</div>
-      <div class="pc-focus">A large faculty spanning AI for health, robotics, power systems, and medical devices — affiliated with Toronto General, SickKids, and Sunnybrook hospitals. The depth of this research ecosystem is unmatched in Canada at the graduate level.</div>
-      <div class="pc-why">Getting meaningful research access as an undergraduate requires more initiative than at UBC or Northwestern. But for a self-directed student who pursues it actively, the ceiling of what is possible here is extraordinary.</div>
+      <div class="pc-focus">40+ core faculty spanning AI for health, cell engineering, cardiac imaging, robotics, and medical devices — affiliated with 10 partner hospitals. Recent faculty have developed MRI methods to track transplanted stem cells in heart repair, and RNA nanotechnologies for gene-level disease control.</div>
+      <div class="pc-why">Getting meaningful research access as an undergraduate requires more initiative than at UBC or Northwestern. But the ceiling of what is possible — for a self-directed student who pursues it actively — is extraordinary. Over half of BME grad students end up at companies like Google, Apple, Sanofi, and Boston Scientific.</div>
     </div>
   </div>
   <div class="insight" style="margin-top:28px">
@@ -395,29 +574,45 @@ table.sc td.rl { text-align: left; font-weight: 600; font-size: 14px; color: var
   </div>
 </section>
 
-<!-- 06 -->
+<!-- 10 VERDICT -->
 <section id="verdict">
-  <p class="sec-tag">06 — Final Verdict</p>
-  <h2 class="sec-title">Where should you go?</h2>
-  <p class="sec-intro">Ranked by overall fit for your profile: biomedical EE interest, desire to stay after graduating, preference for a collaborative and ethically grounded environment, and the goal of leading a meaningful life within engineering.</p>
+  <p class="stag">10 — Final Verdict</p>
+  <h2 class="stitle">Where should you go?</h2>
+  <p class="sintro">Ranked by overall fit for your profile: biomedical EE interest, desire to stay after graduating, preference for a collaborative and ethically grounded environment, and the goal of leading a meaningful life within engineering.</p>
   <div class="vg">
-    <div class="vc top"><div class="v-rank">01</div><div class="v-uni">UBC</div><div class="v-text">Wins on campus culture, weather, political climate, international student experience, mentorship accessibility, and the breathing room to discover what kind of engineer you want to become. Strong biomedical EE ecosystem and a reliable immigration path. You would graduate not just as a capable engineer, but as someone who knows why they build what they build.</div></div>
-    <div class="vc"><div class="v-rank">02</div><div class="v-uni">Northwestern</div><div class="v-text">The superior biomedical EE environment and the most intellectually rich curriculum of the four schools. If the US political context stabilizes significantly, it becomes a strong contender. Keep the application open — but do not bet your four years on that stabilization happening.</div></div>
-    <div class="vc"><div class="v-rank">03</div><div class="v-uni">UofT</div><div class="v-text">Choose this if grad school becomes a firm priority. Canada's most globally prestigious engineering degree, the deepest biomedical research ecosystem in the country, and a clear PR pathway. The trade-off is scale that demands more self-direction to navigate meaningfully.</div></div>
-    <div class="vc"><div class="v-rank">04</div><div class="v-uni">Waterloo</div><div class="v-text">Exceptional at producing industry-ready engineers. But the co-op treadmill, weak biomedical EE culture, limited space for exploration, and documented mental health struggles make it a poor fit for someone seeking meaningful self-discovery in engineering.</div></div>
+    <div class="vc top">
+      <div class="v-rank">01</div>
+      <div class="v-uni">UBC</div>
+      <div class="v-text">Wins on campus culture, weather, political climate, immigration certainty, mentorship accessibility, and the breathing room to discover what kind of engineer you want to become. Canada's #2 engineering school nationally (Maclean's 2024), ranked 40th globally (QS 2026). Clear PGWP → CEC → PR pathway. You would graduate not just as a capable engineer, but as someone who knows why they build what they build.</div>
+    </div>
+    <div class="vc">
+      <div class="v-rank">02</div>
+      <div class="v-uni">Northwestern</div>
+      <div class="v-text">The superior biomedical EE environment (#12 US, US News) and the most intellectually rich curriculum of the four schools. If the US political context stabilises significantly — watch this space — it becomes a genuine contender. Keep the application open. But do not bet your four years on that stabilisation happening.</div>
+    </div>
+    <div class="vc">
+      <div class="v-rank">03</div>
+      <div class="v-uni">UofT</div>
+      <div class="v-text">Canada's most globally prestigious engineering degree (top 20 QS). Largest biomedical engineering hub in Canada — 40+ faculty, 10 partner hospitals, and a clear PR pathway. Choose this if research or grad school becomes a firm priority. The trade-off is scale: 15,000+ engineering students, requiring more self-direction to navigate meaningfully.</div>
+    </div>
+    <div class="vc">
+      <div class="v-rank">04</div>
+      <div class="v-uni">Waterloo</div>
+      <div class="v-text">Objectively the best co-op program in North America (96.8% employment, Fall 2024) and the highest international-to-PR conversion rate of the four (70%). But no dedicated biomedical EE program, a co-op treadmill that leaves no room for exploration, and well-documented mental health struggles make it a poor fit for someone seeking meaningful self-discovery in engineering.</div>
+    </div>
   </div>
   <div class="closing">
-    <p class="sec-tag">A final thought</p>
-    <p style="margin-top:14px">The university you choose will shape not just your skills, but your default assumptions about what engineering is <em>for</em>. Choose one that signals the right things — one that surrounds you with people and problems that remind you why any of this matters.</p>
+    <p class="stag" style="margin-bottom:14px">A final thought</p>
+    <p>The university you choose will shape not just your skills, but your default assumptions about what engineering is <em>for</em>. Choose one that signals the right things — one that surrounds you with people and problems that remind you why any of this matters.</p>
   </div>
 </section>
 
 </main>
 <script>
-document.querySelectorAll('nav a').forEach(a => {
-  a.addEventListener('click', e => {
+document.querySelectorAll('nav a').forEach(a=>{
+  a.addEventListener('click',e=>{
     e.preventDefault();
-    document.querySelector(a.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    document.querySelector(a.getAttribute('href'))?.scrollIntoView({behavior:'smooth',block:'start'});
   });
 });
 </script>
